@@ -1,357 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
 
-  <title>MaLuna Official site</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
 
-  <meta property="og:url" content="http://www.malunabandofficial.com/" />
-  <meta property="og:image" content="http://www.malunabandofficial.com/images/OFFICIALLOGO.jpeg" />
-<meta property="og:title" content="MaLuna Band Official page" />
-<meta property="og:description" content="Maluna's page" />
+        MaLuna Official Website &middot;
 
-
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link rel="image_src" href="../images/OFFICIALLOGO.jpeg" />
-   <style>
-
-  .container {
-      padding: 80px 120px;
-  }
-  .person {
-      border: 10px solid transparent;
-      margin-bottom: 25px;
-      width: 80%;
-      height: 80%;
-      opacity: 0.7;
-  }
-  .person:hover {
-      border-color: black;
-  }
-
-  .carousel-inner > .item > img{
-  	-webkit-filter: grayscale(70%);
-       filter:grayscale(90%);
-
-       height:600px;
-     }
-
-  .carousel-caption h3 {
-      color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-
-  .bg-1 {
-      background: #2d2d30;
-      color: #bdbdbd;
-  }
-  .bg-1 h3 {color: #fff;}
-  .bg-1 p {font-style: italic;}
-
-.navbar {
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size: 15px !important;
-    letter-spacing: 4px;
-    opacity:0.9;
-}
-
-/* Add a gray color to all navbar links */
-.navbar li a, .navbar .navbar-brand {
-    color: gray !important;
-}
-
-/* On hover, the links will turn white */
-.navbar-nav li a:hover {
-    color: #fff !important;
-}
-
-/* The active link */
-.navbar-nav li.active a {
-    color: #fff !important;
-    background-color:#29292c !important;
-}
-
-/* Remove border color from the collapsible button */
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-}
-
-/* Dropdown */
-.open .dropdown-toggle {
-    color: #fff ;
-    background-color: #555 !important;
-}
-
-/* Dropdown links */
-.dropdown-menu li a {
-    color: #000 !important;
-}
-
-/* On hover, the dropdown links will turn red */
-.dropdown-menu li a:hover {
-    background-color: red !important;
-}
-
-.item{
-  text-align: center;
-}
-
-img.no-resize {
-  min-height: 100px;
-  min-width: 100px;
-}
-.rotate90 {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
-
-.images{
-    display:inline-block;
-    width:100px;
-    height:133px;
-    overflow:hidden;
-    vertical-align:top
-}
-
-  </style>
-
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-		<div class="navbar-header">
-
-      <!--Collapsing navbar when screen gets smaller-->
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href"#">MaLuna</a>
-		</div>
+    </title>
 
 
-<!-- NAV BAR-->
-		<div class="collapse navbar-collapse" id="myNavbar">
-			<ul class="nav navbar-nav navbar-right">
-				 <li><a href="#myCarousel">HOME</a></li>
-        		<li><a href="#band">MEMBERS</a></li>
-        		<li><a href="#link">LINKS</a></li>
-        		<li><a href="#contact">CONTACT</a></li>
-      		</ul>
-		</div>
-	</div>
-</nav>
+      <link href="http://fonts.googleapis.com/css?family=Lora:400,400italic|Roboto:100,300,400,700" rel="stylesheet">
+      <link href="css/toolkit.css" rel="stylesheet">
+      <link href="css/application.css" rel="stylesheet">
+
+    <style>
+      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+      /* this chunk of css is not part of the toolkit :) */
+      /* …curses ios, etc… */
+      @media (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2) {
+        body {
+          width: 1px;
+          min-width: 100%;
+          *width: 100%;
+        }
+        #stage {
+          height: 1px;
+          overflow: auto;
+          min-height: 100vh;
+          -webkit-overflow-scrolling: touch;
+        }
+      }
+    </style>
+  </head>
 
 
+<body>
 
+<div class="stage-shelf hidden" id="sidebar">
+  <ul class="nav nav-bordered nav-stacked">
 
+    <li class="nav-header"><small>Sections</small></li>
+<li class="nav-divider"></li>
+    <li>
+      <a href="#grid" data-target="#stage" data-toggle="stage">Members</a>
+    </li>
+    <li>
+      <a href="#chainz" data-target="#stage" data-toggle="stage">MV</a>
+    </li>
+    <li>
+      <a href="#pricing" data-target="#stage" data-toggle="stage">Contact</a>
+    </li>
+    <li>
+      <a href="#footer" data-target="#stage" data-toggle="stage">Other links</a>
+    </li>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img class="center-block img-responsive" src="images/OFFICIALLOGO.jpeg" alt="MaLuna Logo">
-      <div class="carousel-caption">
-        <h3>MaLuna</h3>
-        <p>Welcome to Band MaLuna's Homepage</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img class="center-block img-responsive"src="images/bomber.jpg" alt="Bomber">
-      <div class="carousel-caption">
-        <h3>Open Mic At Bomber</h3>
-        <p>Can't wait to go back</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img class="center-block img-responsive" src="images/Night1.jpeg" alt="Night School">
-      <div class="carousel-caption">
-        <h3>Night School</h3>
-        <p>Our first own concert</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <li class="nav-divider"></li>
+  </ul>
 </div>
 
 
+<div class="stage" id="stage">
+<div class="block block-fill-height app-block-wayne"
+     style="background-image: url(images/OFFICIALLOGO.jpeg)">
 
-<div id="band" class="container text-center">
-  <h3>MaLuna</h3>
-  <p><em>Members<em></p>
+  <button class="btn btn-link stage-toggle" data-target="#stage" data-toggle="stage">
+    <span class="icon  stage-toggle-icon"></span> Menu </button>
 
+
+  <div class="block-sm-middle block-xs-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <h1 class="block-title m-b-md">
+            <span class="text-ribbon text-ribbon-primary">
+              <span>MALUNA.</span>
+            </span>
+          </h1>
+          <p class="lead">
+            <span class="text-ribbon text-ribbon-primary">
+               This website is under construction. Please visit our old website here:
+              <a href="index-old.html">Link</a>
+              </span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="block block-inverse block-transparent p-y-0 app-block-grid">
+
+  <div class="block-bg-clip">
+    <div class="block-bg">
+      <div class="block-bg-img"></div>
+    </div>
+  </div>
+  <div class="container" id="grid">
   <div class="row">
-  	<div class="col-sm-4">
-  		<p class="text-center"><strong>Stephen Hong </strong></p>
-  		<a href="#demo" data-toggle="collapse">
-  			<img class="img-responsive img-circle person center-block" src="../images/sanghyun.jpg"  alt="Stephen hong">
-  		</a>
-  		<div id="demo" class="collapse">
-  			<p> 1st Guitarist</p>
-  			<p> Member since 2015 </p>
-  		</div>
- 	</div>
-
-  	<div class="col-sm-4">
-  		<p class="text-center"><strong>Colin Kim </strong></p>
-  		<a href="#demo2" data-toggle="collapse">
-  			<img class="img-responsive img-circle person center-block" src="../images/h1.JPG" alt="Colin Kim">
-  		</a>
-  		<div id="demo2" class="collapse">
-        <p> Vocal </p>
-        <p> Member since 2015 </p>
-
-  		</div>
- 	</div>
-
-  <div class="col-sm-4">
-      <p class="text-center"><strong>Stanley Moon</strong></p>
-      <a href="#demo3" data-toggle="collapse">
-        <img class="img-responsive img-circle person center-block" src="../images/stanley.jpg" alt="Stanley">
-      </a>
-      <div id="demo3" class="collapse">
-        <p> Drums </p>
-        <p> Member since 2015 </p>
+    <div class="col-lg-4 col-sm-6">
+      <div class="row m-b">
+        <div class="col-lg-12">
+          <div class="panel panel-bold panel-danger">
+            <img src="images/stanley.jpg">
+            <div class="panel-body">
+              <h4 class="m-b-0">Stanley Moon</h4>
+              <p class="text-serif"><em>YOHO</em></p>
+              <hr>
+              <p class="text-serif"><em>Drummer</em></p>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
-	</div>
-</div>
-
-
-
-<div class="container text-center">
-
-  <div class="col-sm-4">
-      <p class="text-center"><strong>Jin-Young Jung </strong></p>
-      <a href="#demo4" data-toggle="collapse">
-        <img class="img-responsive img-circle person center-block" src="../images/jyj1.jpg"  alt="Jin Young">
-      </a>
-      <div id="demo4" class="collapse">
-        <p> 2nd Guitarist</p>
-        <p> Member since 2015 </p>
+      <div class="row m-b hidden-xs">
+        <div class="col-lg-12">
+          <div class="panel panel-bold panel-warning">
+            <img src="images/sanghyun.jpg">
+            <div class="panel-body ">
+              <h4 class="m-b-0">Stephen Hong</h4>
+              <p class="text-serif"><em>guitar</em></p>
+              <hr>
+              <p class="text-serif"><em>Guitar</em></p>
+            </div>
+        </div>
+       </div>
       </div>
-  </div>
-  <div class="col-sm-4">
-      <p class="text-center"><strong>Jun Hong Park </strong></p>
-      <a href="#demo5" data-toggle="collapse">
-
-        <img class="img-responsive img-circle person center-block" src="../images/junhong1.jpg" style="width:100% height:auto" alt="Jun hong">
-
-      </a>
-      <div id="demo5" class="collapse">
-        <p> Keyboard</p>
-        <p> Member since 2015 </p>
+    </div>
+    <div class="col-lg-8 col-sm-6">
+      <div class="row">
+        <div class="col-lg-6 m-b">
+          <div class="app-box-shadow">
+            <div class="panel panel-bold panel-primary">
+            <img src="images/jeremy.jpg">
+            <div class="panel-body">
+              <h4 class="m-b-0">Stephen Hong</h4>
+              <p class="text-serif"><em>guitar</em></p>
+              <hr>
+              <p class="text-serif"><em>Guitar</em></p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-6 m-b">
+          <div class="app-box-shadow">
+            <div class="panel panel-bold panel-default">
+              <img src="images/jyj1.jpg">
+              <div class="panel-body">
+                <h4 class="m-b-0">Stephen Hong</h4>
+                <p class="text-serif"><em>guitar</em></p>
+                <hr>
+                <p class="text-serif"><em>Guitar</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  </div>
-
-  <div class="col-sm-4">
-      <p class="text-center"><strong>Jeremy Lee </strong></p>
-      <a href="#demo6" data-toggle="collapse">
-
-        <img class="img-responsive person img-circle center-block " src="../images/Jeremy.jpg" style="width:100% height:auto" alt="Colin Kim">
-
-      </a>
-      <div id="demo6" class="collapse">
-        <p> Bassist</p>
-        <p> Member since 2015 </p>
+      <div class="row hidden-xs">
+        <div class="col-lg-12">
+          <img src="images/bomber.jpg">
+       </div>
       </div>
+    </div>
+  </div>
+  </div>
   </div>
 
-</div>
-
-
-
-
-<!-- Container for links -->
-<div class="bg-1">
-  <div id= "link" class="container">
-    <h3 class="text-center">LINKS</h3>
-    <p class="text-center">Please visit our other sites!<br> Remember to follow/like page!</p>
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-info"><a target="_blank" href='https://www.facebook.com/officialbandMaLuna'/><span class="label label-primary"> Facebook Page </span></a> </li>
-      <li class="list-group-item list-group-item-warning"><a target="_blank" href='https://soundcloud.com/maluna-official'><span class="label label-warning">  Sound Cloud </a></span> </li>
-      <li class="list-group-item list-group-item-danger"><a target="_blank" href='https://www.youtube.com/channel/UCM0iCtYhwQt9hUHEIuEE7vA'><span class="label label-danger"> Youtube</span></a></li>
-      <li class="list-group-item list-group-item-success"><a target="_blank" href='http://www.audioleaf.com/bandmaluna/'><span class="label label-success"> AudioLeaf</span></a></li>
-    </ul>
-  </div>
-</div>
-
-
-
-
-
-<div id="contact"class="container">
-  <h3 class="text-center">Contact</h3>
-  <p class="text-center"><em>Feel free to contact us!!</em></p>
-  <div class="row test">
-
-     <div class="item">
-      <p><span class="glyphicon glyphicon-map-marker text-center"></span>Waterloo, Ontario, Canada</p>
-      <p><span class="glyphicon glyphicon-phone text-center"></span>Phone: 519- 504-4689</p>
-      <p><span class="glyphicon glyphicon-envelope text-center"></span>Email: malunaofficial@gmail.com</p>
+  <div class="block block-fill-height block-transparent block-inverse block-angle app-block-kanye">
+    <div class="block-bg-clip">
+      <div class="block-bg">
+        <div class="block-bg-img block-bg-img-top"
+             style="background-image: url(images/mv3.jpg)">
+        </div>
+      </div>
     </div>
 
+    <div class="block-xs-middle">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <h1 class="block-title m-b-md">
+              <span class="text-ribbon">
+                <span>Music Videos.</span>
+              </span>
+            </h1>
+            <p class="lead">
+              <span class="text-ribbon">
+                <span>
+                Music videos/soundclound
+                </span>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="row m-b-lg">
+          <div class="col-sm-8">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="682" height="384" src="https://www.youtube.com/embed/XCmUEI4sHe8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/295853119%3Fsecret_token%3Ds-XI0sC&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
 </div>
 
-
-<script>
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip();
-
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate
-    (  {  scrollTop: $(hash).offset().top  }, 900, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-})
-</script>
-
-
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/toolkit.js"></script>
+    <script src="js/application.js"></script>
+  </body>
 </html>
